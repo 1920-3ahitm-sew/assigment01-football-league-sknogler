@@ -28,7 +28,7 @@ public class Main {
         System.out.printf("%-30s%5s%5s%5s%5s%5s%5s%5s%n", "Team", "Pts", 'W', 'D', 'L', "GF", "GA", "GD");
 
         for (Team team : teams) {
-            System.out.printf("%-30s5d%5d%5d%5d%5d%5d%5d%n", team.getName(), team.getP(), team.getWins(), team.getDraws(), team.getDefeats(),
+            System.out.printf("%-30s5d%5d%5d%5d%5d%5d%5d%n", team.getName(), team.getPoints(), team.getWins(), team.getDraws(), team.getDefeats(),
                     team.getGoalsShot(), team.getGoalsRecieved(), team.getGoalDifference());
         }
 

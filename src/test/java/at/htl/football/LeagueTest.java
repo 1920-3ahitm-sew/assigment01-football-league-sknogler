@@ -3,7 +3,6 @@ package at.htl.football;
 import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 import static org.hamcrest.CoreMatchers.is;
 
 class LeagueTest {
@@ -12,8 +11,8 @@ class LeagueTest {
         League league = new League();
         league.addMatchResult(new Match("Nurnberg", "Dortmund", 3, 2));
 
-        assertThat(league.getTable().get(0).getP(), is(3));
-        assertThat(league.getTable().get(1).getP(), is(0));
+        assertThat(league.getTable().get(0).getPoints(), is(3));
+        assertThat(league.getTable().get(1).getPoints(), is(0));
     }
 
     @Test
@@ -22,7 +21,7 @@ class LeagueTest {
         league.addMatchResult(new Match("Nurnberg", "Dortmund", 3, 1));
         league.addMatchResult(new Match("Nurnberg", "Dortmund", 2, 2));
 
-        assertThat(league.getTable().get(0).getP(), is(4));
-        assertThat(league.getTable().get(1).getP(), is(1));
+        assertThat(league.getTable().get(0).getPoints(), is(4));
+        assertThat(league.getTable().get(1).getPoints(), is(1));
     }
 }

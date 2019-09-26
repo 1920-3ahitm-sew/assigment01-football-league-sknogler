@@ -8,8 +8,8 @@ public class League {
     List<Team> teams = new ArrayList<>();
 
     public void addMatchResult(Match match){
-        findOrCreateTeam(match.getGuestTeam()).addMatch(match);
         findOrCreateTeam(match.getHomeTeam()).addMatch(match);
+        findOrCreateTeam(match.getGuestTeam()).addMatch(match);
     }
 
     private Team findOrCreateTeam(String teamN){
